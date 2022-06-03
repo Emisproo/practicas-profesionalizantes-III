@@ -22,18 +22,18 @@
         <span class="tenth"></span>
     </div>
     <div class="container">
-      <form action="#" name="forms">
-          <input type="text" name="answer">
+      <form action="#" id="forms">
+          <input type="text" id="answer" value="">
           <div class="buttons"> <!--primera fila-->
             <input type="button" value="AC" onclick="forms.answer.value = ''">  <!--borra toda la operacion-->
             <input type="button" value="←" onclick="forms.answer.value = forms.answer.value.substr(0, forms.answer.value.length -1)"> <!--borra un solo caracter-->
            
            </div>
            <div class="buttons"><!--segunda fila-->
-            <input type="button" value="7" onclick="forms.answer.value += '7'">  
+            <input id="button7" type="button" value="7">  
             <input type="button" value="8" onclick="forms.answer.value += '8'"> 
             <input type="button" value="9" onclick="forms.answer.value += '9'"> 
-            <input type="button" value="√" onclick="forms.answer.value += '√'"> <!--raiz--> 
+            <input id="buttonSqrt" type="button" value="√"> <!--raiz--> 
             <input type="button" value="^" onclick="forms.answer.value += '^'"> <!--potencia-->
            </div>
            <div class="buttons"><!--tercera fila-->
@@ -55,9 +55,45 @@
             <input type="button" value="." onclick="forms.answer.value += '.'"> 
             <input type="button" value="%" onclick="forms.answer.value += '%'"> 
             <input type="button" value="+/-" onclick="forms.answer.value += '-'">  
-            <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">  
+            <input id="buttonEqual" type="button" value="=" >  
            </div>
       </form>
   </div>
 </body>
+
+<script type="text/javascript" src="math.js"></script>
+
+<script>
+
+let forms = document.getElementById("forms");
+let button7 = document.getElementById("button7");
+let buttonSqrt = document.getElementById("buttonSqrt");
+let buttonEqual = document.getElementById("buttonEqual");
+
+function onclickButton7()
+{
+	document.getElementById("answer").value += 7;
+};
+
+function onclickButtonSquareRoot()
+{
+	document.getElementById("answer").value += 'sqrt(';
+};
+
+function onclickButtonEqual()
+{
+	//ANTES: document.getElementById("answer").value = eval(forms.answer.value);
+	let display = document.getElementById("answer");
+	let currentValue = display.value;
+	alert("current: "+currentValue);
+	alert("evaluated: "+math.evaluate(currentValue));
+	display.value = math.evaluate(currentValue);
+};
+
+button7.addEventListener("click", onclickButton7 );
+buttonSqrt.addEventListener("click", onclickButtonSquareRoot );
+buttonEqual.addEventListener("click", onclickButtonEqual );
+
+</script>
+
 </html> 
