@@ -1,5 +1,3 @@
-<script>
-
 let forms = document.getElementById("forms");
 let buttonAC = document.getElementById("buttonAC");
 let buttonC = document.getElementById("buttonC");
@@ -31,7 +29,7 @@ let buttonSubtract = document.getElementById("buttonSubtract");
 
 function onclickButtonAC()
 {
-	document.getElementById("answer").value += ""
+	document.getElementById("answer").value = ""
 };
 
 function onclickButtonC()
@@ -89,9 +87,9 @@ function onclickButtonSquareRoot()
 	document.getElementById("answer").value += 'sqrt('
 };
 
-function onclickButtonPow()
+function onclickButtonSubtract()
 {
-	document.getElementById("answer").value += 'pow('
+	document.getElementById("answer").value += ''
 };
 
 function onclickButton1()
@@ -132,8 +130,8 @@ function onclickButtonEqual()
 	//ANTES: document.getElementById("answer").value = eval(forms.answer.value);
 	let display = document.getElementById("answer");
 	let currentValue = display.value;
-	alert("current: "+currentValue);
-	alert("evaluated: "+math.evaluate(currentValue));
+	//alert("current: "+currentValue);
+	//alert("evaluated: "+math.evaluate(currentValue));
 	display.value = math.evaluate(currentValue);
 };
 
@@ -141,9 +139,10 @@ function onclickButtonAdd()
 {
 	document.getElementById("answer").value += '+'
 };
+
 function onclickButtonPow()
 {
-	document.getElementById("answer").value += '-'
+	document.getElementById("answer").value += 'pow('
 };
 
 buttonAC.addEventListener("click", onclickButtonAC );
@@ -169,4 +168,3 @@ buttonDecimal.addEventListener("click", onclickButtonDecimal );
 buttonEqual.addEventListener("click", onclickButtonEqual );
 buttonAdd.addEventListener("click", onclickButtonAdd );
 buttonSubtract.addEventListener("click", onclickButtonSubtract );
-</script>
