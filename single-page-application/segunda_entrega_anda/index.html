@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href= "style.css" type= "text/css">
+    
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="bubbles">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+        <span class="fourth"></span>
+        <span class="fifth"></span>
+        <span class="sixth"></span>
+        <span class="seventh"></span>
+        <span class="eighth"></span>
+        <span class="nineth"></span>
+        <span class="tenth"></span>
+    </div>
+    <div class="container">
+      <form action="#" id="forms">
+          <input type="text" id="answer" value="">
+          <div class="buttons"> <!--primera fila-->
+            <input id="buttonAC" type="button" value="AC">  <!--borra toda la operacion-->
+            <input id="buttonC" type="button" value="←" onclick="forms.answer.value = forms.answer.value.substr(0, forms.answer.value.length -1)"> <!--borra un solo caracter-->
+            <input id="buttonComa" type="button" value="," >
+           </div>
+           <div class="buttons"><!--segunda fila-->
+            <input id="button7" type="button" value="7">  
+            <input id ="button8" type="button" value="8"> 
+            <input id ="button9" type="button" value="9" > 
+            <input id="buttonOpen" type="button" value="("> <!--raiz--> 
+            <input id ="buttonClose" type="button" value=")">
+           </div>
+           <div class="buttons"><!--tercera fila-->
+            <input id ="button4" type="button" value="4" >  
+            <input id ="button5" type="button" value="5" > 
+            <input id ="button6" type="button" value="6" > 
+            <input id="buttonSqrt" type="button" value="√"> <!--raiz--> 
+            <input id ="buttonPow" type="button" value="^" > <!--potencia-->
+           </div>
+           <div class="buttons"><!-- cuarta fila-->
+            <input id ="button1" type="button" value="1" >  
+            <input id ="button2" type="button" value="2" > 
+            <input id ="button3" type="button" value="3" >  
+            <input id ="buttonMult" type="button" value="*" >  
+            <input id ="buttonDiv" type="button" value="/" > 
+           </div>
+           <div class="buttons"><!-- quinta fila-->
+            <input id ="button0" type="button" value="0" >  
+            <input id ="buttonDecimal"type="button" value="." >  
+            <input id="buttonEqual" type="button" value="=" >  
+            <input id ="buttonAdd" type="button" value="+" >  
+            <input id ="buttonSubtract" type="button" value="-" > 
+           </div>
+      </form>
+  </div>
+</body>
+
+<script type="text/javascript" src="math.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</html> 
