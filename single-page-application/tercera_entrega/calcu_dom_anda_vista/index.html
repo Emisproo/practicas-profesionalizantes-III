@@ -243,7 +243,14 @@ class CalculatorView extends HTMLElement
         this.fila4.appendChild(this.buttonEqual);
         this.fila4.appendChild(this.buttonAdd);
         this.fila4.appendChild(this.buttonSubtract);
+
+        this.button0.addEventListener('click', () => this.onclickbutton0() );
       
+    }
+
+    onclickbutton0()
+    {
+        this.display.value += '0';
     }
 
     calculate()
