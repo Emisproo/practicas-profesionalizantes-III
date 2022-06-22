@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href= "style.css" type= "text/css">
+    
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="bubbles">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+        <span class="fourth"></span>
+        <span class="fifth"></span>
+        <span class="sixth"></span>
+        <span class="seventh"></span>
+        <span class="eighth"></span>
+        <span class="nineth"></span>
+        <span class="tenth"></span>
+    </div>
+    
+</body>
+
+<script type="text/javascript" src="math.js"></script>
+<script type="text/javascript" src = "controller.js"></script>
+<script type="text/javascript" src = "view.js"></script>
+<script type="text/javascript" src = "model.js"></script>
+<script>
+
+
+customElements.define('x-calculator', CalculatorView );
+
+function startAppGUI()
+{
+    let myModel = new CalculatorModel();
+
+    let calcu = new CalculatorView();
+    
+    document.body.appendChild(calcu);
+}
+
+window.addEventListener('load', startAppGUI);
+</script>
+
+</html> 
