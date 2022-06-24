@@ -115,7 +115,7 @@ class CalculatorController //lo que el usuario espera que pase cuando interactua
 
     onclickbuttonC()
     {
-        this.view.display.value = view.display.value.substr(0, display.value.length -1)
+        this.view.display.value = this.view.display.value.substr(0, this.view.display.value.length -1)
     }
 
     onclickbuttonEcual()
