@@ -19,3 +19,4 @@ class BotonDesplegableController
 	}
 	
 }
+export {BotonDesplegableController};

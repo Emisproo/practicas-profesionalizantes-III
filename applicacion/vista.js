@@ -22,7 +22,7 @@ class Vista extends HTMLElement
         this.a2 = document.createElement("a");
         this.a2.classList.add("w3-bar-item", "w3-button", "w3-hide-large", "w3-large");
         this.a2.id = "close";
-        this.a2.value = "Close";
+        this.a2.innerText = "Close";
         //i dentro de a2 close y accordion. probar hacerlo una vez y dos a
         this.italic = document.createElement("i");
         this.italic.classList.add("fa", "fa-remove");
@@ -31,32 +31,24 @@ class Vista extends HTMLElement
         this.a3 = document.createElement("a");
         this.a3.classList.add("w3-bar-item", "w3-button", "w3-teal");
         this.a3.id = "home";
-        this.a3.value= "Home";
+        this.a3.innerText= "Home";
 
         this.a4 = document.createElement("a");
-        this.a4.classList.add("w3-bar-item", "w3-button");
-        this.a4.className = "menu-side";
-        this.a4.value = "Link 1";
+        this.a4.classList.add("w3-bar-item", "w3-button", "w3-teal");
+        this.a4.innerText = "Link 1";
+        
 
         this.a5 = document.createElement("a");
-        this.a5.classList.add("w3-bar-item", "w3-button");
-        this.a5.className = "menu-side";
-        this.a5.value = "Link 2";
+        this.a5.classList.add("w3-bar-item", "w3-button", "w3-teal");
+        
+        this.a5.innerText = "Link 2";
 
         this.a6 = document.createElement("a");
-        this.a6.classList.add("w3-bar-item", "w3-button");
-        this.a6.className = "menu-side";
-        this.a6.value = "Link 3";
+        this.a6.classList.add("w3-bar-item", "w3-button", "w3-teal");
+       
+        this.a6.innerText = "Link 3";
 
-        this.a5 = document.createElement("a");
-        this.a5.classList.add("w3-bar-item", "w3-button");
-        this.a5.className = "menu-side";
-        this.a5.value = "Link 4";
-
-        this.a6 = document.createElement("a");
-        this.a6.classList.add("w3-bar-item", "w3-button");
-        this.a6.className = "menu-side";
-        this.a6.value = "Link 5";
+       
 
        /* //separar en otra clase
         this.desplegable = createElement("div");
@@ -65,7 +57,7 @@ class Vista extends HTMLElement
         this.accordion.createElement("a"); 
         this.accordion.classList.add("w3-bar-item w3-button");
         this.accordion.className = ("menu-side");
-        this.accordion.value = "Dropdown"; //agregar texto
+        this.accordion.innerText = "Dropdown"; //agregar texto
         //dentro de desplegable
         this.demo = createElement("div");
         this.demo.classList.add("w3-hide");
@@ -74,65 +66,68 @@ class Vista extends HTMLElement
         this.desp1 = createElement("a");
         this.desp1.classList.add("w3-bar-item w3-button");
         this.desp1.className = "menu-side";
-        this.desp1.value = "Link";
+        this.desp1.innerText = "Link";
 
         this.desp2= createElement("a");
         this.desp2.classList.add("w3-bar-item w3-button");
         this.desp2.className = "menu-side";
-        this.desp2.value = "Link";
+        this.desp2.innerText = "Link";
 
         this.desp3 = createElement("a");
         this.desp3.classList.add("w3-bar-item w3-button");
         this.desp3.className = "menu-side";
-        this.desp3.value = "Link";*/
+        this.desp3.innerText = "Link";*/
         //=========================================
+        //dentro de nav
+        //this.div= document.createElement("div");
+
         //dentro de body
-        this.divRaro = createElement("div");
-        this.divRaro.classList.add("w3-overlay", "w3-hide-large", "w3-animate-opacity");
-        this.divRaro.id = "myOverlay";
-        this.divRaro.style.cursor = "pointer";
+        this.overlay = document.createElement("div");
+        this.overlay.classList.add("w3-overlay", "w3-hide-large", "w3-animate-opacity");
+        this.overlay.id = "myOverlay";
+        this.overlay.style.cursor = "pointer";
         //========================================
         //dentro de body
-        this.container2 = createElement("div");
+        this.container2 = document.createElement("div");
         this.container2.classList.add("w3-main");
         this.container2.style.marginLeft = "250px";
         //dentro de container2
-        this.top = createElement("div");
+        this.top = document.createElement("div");
         this.top.classList.add("w3-container", "w3-top", "w3-theme", "w3-large");
         this.top.id = "myTop";
         //dentro de top
-        this.parrafo = createElement("p");
+        this.parrafo = document.createElement("p");
         //dentro de parrafo
-        this.italic2 = createElement("i");
+        this.italic2 = document.createElement("i");
         this.italic2.classList.add("fa", "fa-bars", "w3-button", "w3-teal", "w3-hide-large", "w3-xlarge");
         //dentro de parrafo
-        this.intro = createElement("span");
+        this.intro = document.createElement("span");
         this.intro.classList.add("w3-hide");
         this.intro.id = "myIntro"; //cargarle texto
         //============================================
         //dentro de body
-        this.encabezado = createElement("header");
+        this.encabezado = document.createElement("header");
         this.encabezado.classList.add("w3-container", "w3-theme");
         this.encabezado.style.padding = "64px 32px";
         //dentro de encabezado
-        this.h1 = createElement("h1");
+        this.h1 = document.createElement("h1");
         this.h1.classList.add("w3-xxxlarge");//cargarle texto
         //=================================================
         //dentro de body
-        this.container3 = createElement("div");
-        this.container3.classList("w3-container");
+        this.container3 = document.createElement("div");
+        this.container3.classList.add("w3-container");
         this.container3.style.padding = "32px";
         //dentro de container3
-        this.ul = createElement("ul");
+        this.ul = document.createElement("ul");
         this.ul.classList.add("w3-leftbar", "w3-theme-border");
         this.ul.style.listStyle = "none";
         //=================================================
         //dentro de body
-        this.footer = createElement("footer");
+        this.footer = document.createElement("footer");
         this.footer.classList.add("w3-container", "w3-theme");
         this.footer.style.padding = "32px";
         //dentro de footer
-        this.parrafo2 = createElement("p"); //agregar texto
+        this.parrafo2 = document.createElement("p"); //agregar texto
     
     }
 
@@ -148,8 +143,8 @@ class Vista extends HTMLElement
         this.container.appendChild(this.a4);
         this.container.appendChild(this.a5);
         this.container.appendChild(this.a6);
-        
-        document.body.appendChild(this.divRaro);
+        //this.container.appendChild(this.div);
+        document.body.appendChild(this.overlay);
 
         document.body.appendChild(this.container2);
         this.container2.appendChild(this.top);

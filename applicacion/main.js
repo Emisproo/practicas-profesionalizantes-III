@@ -5,7 +5,7 @@ function main()
     let vista = new Vista();
     let botonDesplegable= new BotonDesplegable();
 
-    vista.innerContent.appendChild(botonDesplegable);
+    vista.container.appendChild(botonDesplegable);
 
     document.body.appendChild(vista);
     document.body.appendChild(botonDesplegable);

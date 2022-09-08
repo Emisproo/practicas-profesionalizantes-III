@@ -1,3 +1,4 @@
+import{BotonDesplegableController} from "./BotonDesplegableController.js"
 class BotonDesplegable extends HTMLElement
 {
 	constructor()
@@ -24,6 +25,13 @@ class BotonDesplegable extends HTMLElement
 		this.container.appendChild(item);
 		return item;
 	}
+
+	addBotonDesplegable()
+	{
+		let groupItem = new BotonDesplegable();
+		this.container.appendChild(groupItem);
+		return groupItem;
+	}
 	
 	
 	connectedCallback()
@@ -37,4 +45,5 @@ class BotonDesplegable extends HTMLElement
 	}
 	
 }
+customElements.define("x-botondesplegable", BotonDesplegable);
 export{BotonDesplegable};
