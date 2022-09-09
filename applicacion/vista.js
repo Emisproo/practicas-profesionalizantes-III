@@ -134,7 +134,7 @@ class Vista extends HTMLElement
 
     connectedCallback()
     {
-        document.body.appendChild(this.container);
+        this.appendChild(this.container);
         this.container.appendChild(this.a1);
         //this.a1.appendChild(this.img);
         this.container.appendChild(this.a2);
@@ -144,21 +144,21 @@ class Vista extends HTMLElement
         this.container.appendChild(this.a5);
         this.container.appendChild(this.a6);
         //this.container.appendChild(this.div);
-        document.body.appendChild(this.overlay);
+        this.appendChild(this.overlay);
 
-        document.body.appendChild(this.container2);
+        this.appendChild(this.container2);
         this.container2.appendChild(this.top);
         this.top.appendChild(this.parrafo);
         this.parrafo.appendChild(this.italic2);
         this.parrafo.appendChild(this.intro);
         
-        document.body.appendChild(this.encabezado);
+        this.appendChild(this.encabezado);
         this.encabezado.appendChild(this.h1);
 
-        document.body.appendChild(this.container3);
+        this.appendChild(this.container3);
         this.container3.appendChild(this.ul);
 
-        document.body.appendChild(this.footer);
+        this.appendChild(this.footer);
         this.footer.appendChild(this.parrafo2);
 
     }

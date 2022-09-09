@@ -1,4 +1,5 @@
 import{BotonDesplegableController} from "./BotonDesplegableController.js"
+
 class BotonDesplegable extends HTMLElement
 {
 	constructor()
@@ -18,21 +19,28 @@ class BotonDesplegable extends HTMLElement
 		this.innerController = new BotonDesplegableController(this);
 	}
 	
-	addItem()
+	addItem(label)
 	{
 		let item = document.createElement('div');
 		item.classList.add('w3-bar-item', 'w3-button');		
 		this.container.appendChild(item);
+		item.innerText = label;
 		return item;
 	}
 
-	addBotonDesplegable()
+	show()
 	{
-		let groupItem = new BotonDesplegable();
-		this.container.appendChild(groupItem);
-		return groupItem;
+		//alert('Testeando..');
+		let x = this.container;
+	  if (x.className.indexOf("w3-show") == -1) {
+		x.className += " w3-show";
+		x.previousElementSibling.className += " w3-theme";
+	  } else { 
+		x.className = x.className.replace("w3-show", "");
+		x.previousElementSibling.className = 
+		x.previousElementSibling.className.replace(" w3-theme", "");
+	  }
 	}
-	
 	
 	connectedCallback()
 	{
